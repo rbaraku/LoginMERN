@@ -4,14 +4,15 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 
 function Signup(){
-    const [name, setName] = useState()
+    const [Firstname, setFirstName] = useState()
+    const [Lastname, setLastName] = useState()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/register', {name, email, password})
+        axios.post('http://localhost:3001/register', {Firstname, Lastname, email, password})
         .then(result => {console.log(result)
         navigate('/login') 
         })
@@ -26,7 +27,7 @@ function Signup(){
                 <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="email">
-                        <strong>Name</strong>
+                        <strong>First Name</strong>
                         </label>
                         <input
                         type="text"
@@ -34,7 +35,20 @@ function Signup(){
                         autoComplete="off"
                         name="email"
                         className="form-control rounded-0"
-                        onChange={(e) => setName(e.target.value)}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        />
+                        </div>
+                        <div className="mb-3">
+                    <label htmlFor="email">
+                        <strong>Last Name</strong>
+                        </label>
+                        <input
+                        type="text"
+                        placeholder="Enter Name"
+                        autoComplete="off"
+                        name="email"
+                        className="form-control rounded-0"
+                        onChange={(e) => setLastName(e.target.value)}
                         />
                         </div>
                         <div className="mb-3">

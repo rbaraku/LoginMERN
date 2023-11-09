@@ -56,8 +56,8 @@ function Login(){
                             Login
                         </button>
                         </form>
-                        <p>Already Have an Account?</p>
-                        <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
+                        <p>New User?</p>
+                        <Link to="/register" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
                             Sign Up
                         </Link>   
                 </div>
