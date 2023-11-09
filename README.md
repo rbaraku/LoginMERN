@@ -1,1 +1,2 @@
-# https---github.com-rbaraku-LoginMERN
+Form with registration and login using the MERN stack.
+Authentication with Node Authentication.
